@@ -6,7 +6,10 @@ This Project gives an idea to build the chat bot from scratch to production leve
 # To get started
 
 > cd Rasa_Frontend
+
 > npm install 
+
+
 > npm start 
 
 
