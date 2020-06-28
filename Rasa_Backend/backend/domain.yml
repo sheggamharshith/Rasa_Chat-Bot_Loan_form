@@ -1,0 +1,199 @@
+session_config:
+  session_expiration_time: 4
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- bot_challenge
+- thankyou
+- chitchat
+- loan
+- canthelp
+- stop
+- inform
+- submitform
+- proceed
+- unknow
+- slotreset
+- faq
+- explain
+- thanks
+- bye
+- faq/ask_owner
+- faq/ask_builder
+- faq/ask_languages
+- faq/ask_channels
+entities:
+- person_name
+- type_loan
+- phone_number
+- email_id
+- housing_status
+- other_loans
+- monthly_salary
+- typle_loan
+- email
+- PERSON
+- ORG
+slots:
+  email_id:
+    type: unfeaturized
+  housing_status:
+    type: unfeaturized
+  monthly_salary:
+    type: unfeaturized
+  other_loans:
+    type: unfeaturized
+  person_name:
+    type: unfeaturized
+  phone_number:
+    type: unfeaturized
+  requested_slot:
+    type: unfeaturized
+  type_loan:
+    type: unfeaturized
+responses:
+  utter_accept_go:
+  - text: so here we go I need some of your details!
+  utter_ask_email_id:
+  - text: may i know you email id ?
+  utter_ask_housing_status:
+  - buttons:
+    - payload: rented
+      title: rented
+    - payload: own
+      title: own
+    - payload: others
+      title: others
+    text: May i know your housing status ?
+  utter_ask_monthly_salary:
+  - buttons:
+    - payload: classified
+      title: classified
+    text: may i know your salary ? or else click on classified
+  utter_ask_other_loans:
+  - buttons:
+    - payload: one
+      title: one
+    - payload: two
+      title: two
+    - payload: three
+      title: three
+    - payload: four
+      title: four
+    text: may i know your other bank loans ?
+  utter_ask_person_name:
+  - text: May i know your name please ?
+  utter_ask_phone_number:
+  - text: May i know your phone number ?
+  utter_ask_type_loan:
+  - buttons:
+    - payload: car loan
+      title: car
+    - payload: house loan
+      title: house
+    - payload: bike loan
+      title: bike
+    - payload: gold loan
+      title: gold
+    - payload: personal loan
+      title: personal
+    text: May i know the type of loan you want ?
+  utter_canthelp:
+  - text: sorry i cannot process your application if you deny
+  utter_convence:
+  - text: sir i need that information so that i can process your application every
+      information stored with ous is confidential and subject to privacy with company
+      polices
+  utter_default:
+  - text: “Sorry, Didn’t understand. can you rephrase it”
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_goodbye:
+  - text: Bye
+  utter_greet:
+  - image: https://media.giphy.com/media/3oKIPhUfA1h2U2Koko/giphy.gif
+    text: Hey! there i am here to help you
+  utter_greet_2:
+  - text: I can help you with loan application
+  utter_greet_ask_loan_premission:
+  - buttons:
+    - payload: yes
+      title: yes
+    - payload: no
+      title: no
+    text: Do you want to proceed to application
+  utter_happy:
+  - text: Great, carry on!
+  utter_iamabot:
+  - text: I am a bot, powered by bigdatamatica
+  utter_loan_from_accepted_proced_next:
+  - buttons:
+    - payload: /proceed
+      title: proceed
+    - payload: /submitform
+      title: submit the form
+    text: I got your details that are enough to process you application and submit
+      it if you want your application of  {type_loan} loan  to process quickly i need
+      some extra information about you want to
+  utter_submit:
+  - text: thanks for filling the form
+  utter_submit_deny:
+  - custom:
+      payload: disableText
+    text: Okay your application was submitted successfully thanks for being with ous!!!
+      i will process you application soon
+  utter_submit_success:
+  - custom:
+      payload: disableText
+    text: thanks for submitting your details our team will get back to you soon have
+      a great day!!
+  utter_explain_why_name:
+  - text: How should i address you then for that I need a name right?
+  utter_explain_why_email_id:
+  - text: I will be sending your details to my company for that i need your email
+      id
+  utter_explain_why_phone_number:
+  - text: To have a conversation with you again I need your contact details
+  utter_thanks:
+  - text: Your welcome
+  utter_bye:
+  - custom:
+      payload: disableText
+    text: bye have a great day
+actions:
+- utter_greet
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- utter_greet_ask_loan_premission
+- utter_greet_2
+- utter_accept_go
+- utter_ask_person_name
+- utter_ask_phone_number
+- utter_ask_email_id
+- utter_ask_type_loan
+- utter_loan_from_accepted_proced_next
+- utter_submit
+- utter_convence
+- utter_submit_deny
+- utter_canthelp
+- utter_default
+- action_hello_world
+- utter_ask_housing_status
+- utter_ask_monthly_salary
+- utter_ask_other_loans
+- utter_submit_success
+- action_chat_restart
+- respond_faq
+- utter_explain_why_email_id
+- utter_explain_why_name
+- utter_explain_why_phone_number
+- utter_thanks
+- utter_bye
+forms:
+- loan_form
+- loan_form2
