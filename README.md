@@ -19,5 +19,7 @@ This Project gives an idea to build the chat bot from scratch to production leve
 (install all rasa frame work dependence)
 
 > rasa x --debug
+
 in another terminal 
+
 > rasa run actions
