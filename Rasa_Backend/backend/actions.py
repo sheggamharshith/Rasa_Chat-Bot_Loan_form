@@ -203,7 +203,7 @@ class loanForm(FormAction):
         tracker: Tracker,
         domain: Dict[Text, Any], ) -> List[Dict]:
         dispatcher.utter_message(template="utter_submit")
-        send = email("harshit675@gmail.com","harshitH9@!",tracker.get_slot("email_id"),tracker.get_slot("person_name"),tracker.get_slot("type_loan"),tracker.get_slot("phone_number"))
+        send = email("harshit675@gmail.com","******",tracker.get_slot("email_id"),tracker.get_slot("person_name"),tracker.get_slot("type_loan"),tracker.get_slot("phone_number"))
         send.sendmail()
         return []
 
